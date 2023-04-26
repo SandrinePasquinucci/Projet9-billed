@@ -5,13 +5,11 @@
 ## Comment lancer l'API en local:
 
 ### Cloner le projet:
-
 ```
 git clone https://github.com/OpenClassrooms-Student-Center/Billed-app-FR-Back.git
 ```
 
 ### Acceder au repertoire du projet :
-
 ```
 cd Billed-app-FR-Back
 ```
@@ -34,32 +32,30 @@ L'api est accessible sur le port `5678` en local, c'est à dire `http://localhos
 
 ## Utilisateurs par défaut:
 
-### administrateur :
-
+### administrateur : 
 ```
-utilisateur : admin@test.tld
+utilisateur : admin@test.tld 
 mot de passe : admin
 ```
-
 ### employé :
-
 ```
 utilisateur : employee@test.tld
 mot de passe : employee
 ```
 
+
 ================ EN ====================
+
 
 ## How to run the API locally :
 
-### Clone the projet:
 
+### Clone the projet:
 ```
 git clone https://github.com/OpenClassrooms-Student-Center/Billed-app-FR-Back.git
 ```
 
 ### Go to the project directory :
-
 ```
 cd Billed-app-FR-Back
 ```
@@ -73,22 +69,19 @@ npm install
 ### Run the API :
 
 ```
-npm run run:dev
+npm run:dev
 ```
 
 ### Access to the PAI :
 
 The API is locally available on port `5678`, go to `http://localhost:5678`
 
-### administrateur :
-
+### administrateur : 
 ```
-utilisateur : admin@company.tld
+utilisateur : admin@company.tld 
 mot de passe : admin
 ```
-
 ### employé :
-
 ```
 utilisateur : employee@company.tld
 mot de passe : employee

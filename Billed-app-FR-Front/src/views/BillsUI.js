@@ -19,29 +19,15 @@ const row = (bill) => {
     `;
 };
 
-// //Point 1 [Bug report] - Bills
-// const customSort = (data) => {
-//   console.log(data);
-//   data.sort((a, b) => (a.newDate > b.newDate || a.date > b.date ? 1 : -1));
-//   console.log(data);
-//   return data;
-// };
+//Point 1 [Bug report] - Bills
 // const rows = (data) => {
-//   //Point 1 [Bug report] - Bills
-//   //return data && data.length ? data.map((bill) => row(bill)).join("") : "";
-//   console.log(data);
+//   return (data && data.length) ? data.map(bill => row(bill)).join("") : ""
+// }
 
-//   return data && data.length
-//     ? customSort(data)
-//         .map((bill) => row(bill))
-//         .join("")
-//     : "";
-// };
 const rows = (data) => {
-  console.log(data);
   return data && data.length
     ? data
-        .sort((a, b) => (a.newDate > b.newDate || a.date > b.date ? 1 : -1))
+        .sort((a, b) => (new Date(a.date) < new Date(b.date) ? 1 : -1))
         .map((bill) => row(bill))
         .join("")
     : "";

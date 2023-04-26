@@ -45,7 +45,8 @@ export default class {
             try {
               return {
                 ...doc,
-                newDate: doc.date,
+                //Point 1 [Bug report] - Bills
+                date: doc.date,
                 date: formatDate(doc.date),
                 status: formatStatus(doc.status),
               };

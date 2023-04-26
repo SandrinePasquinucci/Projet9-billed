@@ -19,20 +19,14 @@ export default class NewBill {
   }
   handleChangeFile = (e) => {
     e.preventDefault();
-    // Point 3 [Bug Hunt] - Bills
-
     const file = this.document.querySelector(`input[data-testid="file"]`)
       .files[0];
-    //File {name: 'Billed+-+E2E+parcours+administrateur.docx', lastModified:
-    //1680506201846, lastModifiedDate: Mon Apr 03 2023 09:16:41 GMT+0200 (heure d’été d’Europe centrale), webkitRelativePath: '', size: 307680, …}
+    // Point 3 [Bug Hunt] - Bills
     const fileAutorised = ["image/jpeg", "image/jpg", "image/png"];
+    // modifié pour prendre en compte le cas : NomFichier.jpeg.docx
     //const fileAutorised = [".jpeg", ".jpg", ".png"];
 
     if (fileAutorised.includes(file.type)) {
-      // modifié pour prendre en compte le cas : NomFichier.jpeg.docx
-      //if (fileAutorised.includes(file.type)) {
-      const file = this.document.querySelector(`input[data-testid="file"]`)
-        .files[0];
       const filePath = e.target.value.split(/\\/g);
       const fileName = filePath[filePath.length - 1];
       const formData = new FormData();
