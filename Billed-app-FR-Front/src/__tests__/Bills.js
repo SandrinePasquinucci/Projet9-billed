@@ -52,7 +52,7 @@
 import { screen, waitFor } from "@testing-library/dom";
 import BillsUI from "../views/BillsUI.js";
 import { bills } from "../fixtures/bills.js";
-import { ROUTES_PATH } from "../constants/routes.js";
+import { ROUTES, ROUTES_PATH } from "../constants/routes.js";
 import { localStorageMock } from "../__mocks__/localStorage.js";
 
 import router from "../app/Router.js";
@@ -63,6 +63,7 @@ import "@testing-library/jest-dom/extend-expect";
 
 // //erreur 404 500
 import mockStore from "../__mocks__/store";
+import Bills from "../containers/Bills.js";
 
 jest.mock("../app/store", () => mockStore);
 
@@ -111,7 +112,7 @@ describe("Given I am connected as an employee", () => {
 describe("Given I am a user connected as an employee", () => {
   describe("When I click on icon-eye", () => {
     describe("When I navigate to Bills", () => {
-      // Il faut que le titre note de frais apparaisse bien sur la page
+      // Il faut que le titre Mes notes de frais apparaisse bien sur la page
       test("Then the page show", async () => {
         const onNavigate = (pathname) => {
           document.body.innerHTML = ROUTES({ pathname });
