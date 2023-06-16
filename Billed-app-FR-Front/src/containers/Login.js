@@ -72,8 +72,6 @@ export default class Login {
   };
 
   // not need to cover this function by tests
-  // Point 5 [Bug report] - Ajout des tests unitaires et d'intégration
-  /* istanbul ignore next */
   login = (user) => {
     if (this.store) {
       return this.store
@@ -92,8 +90,6 @@ export default class Login {
   };
 
   // not need to cover this function by tests
-  // Point 5 [Bug report] - Ajout des tests unitaires et d'intégration
-  /* istanbul ignore next */
   createUser = (user) => {
     if (this.store) {
       return this.store
